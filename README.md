@@ -30,7 +30,12 @@ conda activate cal_owdfa
 ![datasets](assets/datasets.png)
 
 Our **OWDFA-40** dataset extends CPL-ICCV2023 by incorporating a doubled number of recent face manipulation methods.  
-All real-face images from different sources are treated as a single *real* class.
+
+1. All real-face images from different sources are treated as a single *real* class.
+2. The data sampling strategy and the labeled/unlabeled split are summarized in the table below.
+3. Specifically, samples are first uniformly collected, after which 20% of the data from each category is held out to construct the test set. (see the details in dataset/owdfa_dataset.py)
+
+<img src="assets/data_partitioning.png" alt="data_partitioning" style="zoom: 3%;" />
 
 The dataset is publicly available at:
 
@@ -85,19 +90,21 @@ bash scripts/train_wok.sh
 
 ### Known-K Setting
 
+Different random seeds in dataset construction may introduce performance variations; thus, we recommend fixing the random seed for dataset construction. We provide two sets of results below for reference.
+
 | Protocol | Paper (3 runs) | This Repo (3 runs) |
 |----------|---------------|--------------------|
-| P1       | TBD           | TBD                |
-| P2       | TBD           | TBD                |
-| P3       | TBD           | TBD                |
+| P1       | All ACC 88.3 / Known ACC 98.0 / New ACC 76.5 | seed 2025: All ACC 87.98 / Known ACC 98.04 / New ACC 75.47<br />seed 2026: All ACC 88.53 / Known ACC 98.24 / New ACC 76.59<br />seed 2027: All ACC 88.37 / Known ACC 98.11 / New ACC 76.39<br />Average: All ACC: 88.29 / Known ACC: 98.13 / New ACC: 76.15 |
+| P2       | All ACC 82.8 / Known ACC 97.6 / New ACC 67.5 | seed 2025: All ACC 82.42 / Known ACC 97.95 / New ACC 66.14<br />seed 2026: All ACC 81.83 / Known ACC 97.88 / New ACC 65.04<br />seed 2027: All ACC 81.38 / Known ACC 97.69 / New ACC 64.40<br />Average: All ACC: 81.88 / Known ACC: 97.84 / New ACC: 65.19 |
+| P3       | All ACC 91.0 / Known ACC 94.8 / New ACC 80.3 | seed 2025: All ACC 90.74 / Known ACC 95.29 / New ACC 83.36<br />seed 2026: All ACC 90.62 / Known ACC 95.32 / New ACC 79.61<br />seed 2027: All ACC 90.96 / Known ACC 95.30 / New ACC 78.08<br />Average: All ACC: 90.77 / Known ACC: 95.30 / New ACC: 80.35 |
 
 ### Unknown-K Setting
 
 | Protocol | Paper (3 runs) | This Repo (3 runs) |
 |----------|---------------|--------------------|
-| P1       | TBD           | TBD                |
-| P2       | TBD           | TBD                |
-| P3       | TBD           | TBD                |
+| P1       | All ACC 87.5 / Known ACC 98.2 / New ACC 76.5 | seed 2025: All ACC 88.66 / Known ACC 98.39 / New ACC 77.21<br />seed 2026: All ACC 88.63 / Known ACC 97.93 / New ACC 77.73<br />seed 2027: All ACC 87.62 / Known ACC 98.12 / New ACC 74.62<br />Average: All ACC 88.30 / Known ACC 98.15 / New ACC 76.52 |
+| P2       | All ACC 80.0 / Known ACC 97.5 / New ACC 63.0 | seed 2025: All ACC 81.76 / Known ACC 97.90 / New ACC 65.74<br />seed 2026: All ACC 81.32 / Known ACC 97.60 / New ACC 64.73<br />seed 2027: All ACC 83.11 / Known ACC 97.59 / New ACC 68.31<br />Average: All ACC 82.06 / Known ACC 97.70 / New ACC 66.26 |
+| P3       | All ACC 91.5 / Known ACC 95.0 / New ACC 83.2 | seed 2025: All ACC 91.22 / Known ACC 95.28 / New ACC 77.56<br />seed 2026: All ACC 90.96 / Known ACC 95.51 / New ACC 79.06<br />seed 2027: All ACC 92.10 / Known ACC 95.41 / New ACC 83.92<br />Average: All ACC 91.43 / Known ACC 95.40 / New ACC 80.18 |
 
 ---
 
