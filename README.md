@@ -35,7 +35,7 @@ Our **OWDFA-40** dataset extends CPL-ICCV2023 by incorporating a doubled number 
 2. The data sampling strategy and the labeled/unlabeled split are summarized in the table below.
 3. Specifically, samples are first uniformly collected, after which 20% of the data from each category is held out to construct the test set. (see the details in dataset/owdfa_dataset.py)
 
-<img src="assets/data_partitioning.png" alt="data_partitioning" width="60%">
+<img src="assets/data_partitioning.png" alt="data_partitioning" width="50%">
 
 The dataset is publicly available at:
 
