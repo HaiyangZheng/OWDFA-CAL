@@ -27,6 +27,8 @@ conda activate cal_owdfa
 
 #### Dataset Description
 
+![dataset](assets/dataset.png)
+
 Our dataset extends **OWDFA-ICCV2023** by incorporating a doubled number of recent face manipulation methods.  
 All real-face images from different sources are treated as a single *real* class.
 
