@@ -20,7 +20,7 @@ We recommend using Conda:
 
 ```bash
 conda env create -f environment.yml
-conda activate cal_owdfa
+conda activate owdfa
 ```
 
 ### 2. Dataset
