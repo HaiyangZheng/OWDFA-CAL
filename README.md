@@ -25,11 +25,11 @@ conda activate cal_owdfa
 
 ### 2. Dataset
 
-#### Dataset Description
+#### OWDFA-40 Dataset Description
 
 ![datasets](assets/datasets.png)
 
-Our dataset extends **OWDFA-ICCV2023** by incorporating a doubled number of recent face manipulation methods.  
+Our **OWDFA-40** dataset extends CPL-ICCV2023 by incorporating a doubled number of recent face manipulation methods.  
 All real-face images from different sources are treated as a single *real* class.
 
 The dataset is publicly available at:
@@ -115,8 +115,8 @@ If you find this repository useful, please consider citing our work:
 
 This project is built upon the following excellent works:
 
-- [OWDFA-ICCV23-CPL](https://github.com/TencentYoutuResearch/OpenWorld-DeepFakeAttribution)
-- [OWDFA-ICCV25-CDAL](https://github.com/yzheng97/CDAL)
+- [CPL-ICCV23](https://github.com/TencentYoutuResearch/OpenWorld-DeepFakeAttribution)
+- [CDAL-ICCV25](https://github.com/yzheng97/CDAL)
 
 The dataset construction is inspired by:
 
