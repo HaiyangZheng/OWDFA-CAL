@@ -106,6 +106,9 @@ def main():
     parser.add_argument("--wandb_project", type=str, default=None, help="WandB project name")
     parser.add_argument("--wandb_entity", type=str, default=None, help="WandB entity / user name")
 
+    parser.add_argument("--eval_only", action="store_true", help="Only run evaluation on the test set")
+    parser.add_argument("--eval_ckpt", type=str, default=None, help="Path to checkpoint for evaluation")
+
     args = parser.parse_args()
 
     # ---------------------------------------------------------
@@ -274,8 +277,18 @@ def main():
         logger=pl_logger,
     )
 
+    if args.eval_only:
+        assert args.eval_ckpt is not None, "Please specify --eval_ckpt"
 
-    trainer.fit(model, train_dataloader, test_dataloader)
+        logger.info(f"Evaluating checkpoint: {args.eval_ckpt}")
+
+        trainer.test(
+            model=model,
+            dataloaders=test_dataloader,
+            ckpt_path=args.eval_ckpt
+        )
+    else:
+        trainer.fit(model, train_dataloader, test_dataloader)
 
     if args.use_wandb:
             wandb.finish()

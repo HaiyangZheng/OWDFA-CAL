@@ -490,3 +490,15 @@ class CAL_OWDFA(SLModel):
         ], dim=0)
 
         return final_fc2_weight
+
+
+    def test_step(self, batch, batch_idx):
+        if not hasattr(self, "val_step_outputs"):
+            self.val_step_outputs = {'preds': [], 'label': [], 'conf': []}
+        return self.validation_step(batch, batch_idx)
+
+    def on_test_epoch_end(self):
+        if hasattr(self, "on_validation_epoch_end"):
+            return self.on_validation_epoch_end()
+        if hasattr(self, "validation_epoch_end"):
+            return self.validation_epoch_end([])
