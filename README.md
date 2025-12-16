@@ -116,7 +116,12 @@ Different random seeds in dataset construction may introduce performance variati
 If you find this repository useful, please consider citing our work:
 
 ```bibtex
-
+@article{zheng2025open,
+  title={Open-World Deepfake Attribution via Confidence-Aware Asymmetric Learning},
+  author={Zheng, Haiyang and Pu, Nan and Li, Wenjing and Long, Teng and Sebe, Nicu and Zhong, Zhun},
+  journal={arXiv preprint arXiv:2512.12667},
+  year={2025}
+}
 ```
 
 ---
