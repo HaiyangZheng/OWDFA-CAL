@@ -1,8 +1,11 @@
 # Open-World Deepfake Attribution via Confidence-Aware Asymmetric Learning
 
 <p align="center">
-    <!-- <a href="https://neurips.cc/virtual/2024/poster/93382"><img src="https://img.shields.io/badge/NeurIPS%202024-red"></a>
-    <a href="https://arxiv.org/abs/2410.19213"><img src="https://img.shields.io/badge/arXiv-2410.19213-red"></a> -->
+    <img src="https://img.shields.io/badge/AAAI-2026-red">
+    &nbsp;
+    <a href="https://arxiv.org/pdf/2512.12667"><img src="https://img.shields.io/badge/arXiv-2512.12667-red"></a>
+    &nbsp;
+    <a href="https://huggingface.co/datasets/hyzheng/OWDFA40-Benchmark"><img src="https://img.shields.io/badge/Dataset-Hugging%20Face-red"></a>
 </p>
 <p align="center">
 	Open-World Deepfake Attribution via Confidence-Aware Asymmetric Learning<br>
