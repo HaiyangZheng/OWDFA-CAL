@@ -5,7 +5,7 @@
     &nbsp;
     <a href="https://arxiv.org/pdf/2512.12667"><img src="https://img.shields.io/badge/arXiv-2512.12667-red"></a>
     &nbsp;
-    <a href="https://huggingface.co/datasets/hyzheng/OWDFA40-Benchmark"><img src="https://img.shields.io/badge/Dataset-Hugging%20Face-red"></a>
+    <a href="https://huggingface.co/datasets/hyzheng/OWDFA40-Benchmark"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-FFD21E"></a>
 </p>
 <p align="center">
 	Open-World Deepfake Attribution via Confidence-Aware Asymmetric Learning<br>
