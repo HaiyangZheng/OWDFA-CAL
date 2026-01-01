@@ -4,182 +4,42 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
   <meta name="title" content="Open-World Deepfake Attribution via Confidence-Aware Asymmetric Learning - Haiyang Zheng">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
+  <meta name="description" content="Open-World Deepfake Attribution (OWDFA) via Confidence-Aware Asymmetric Learning (CAL) addresses confidence skew and unknown forgery types using dynamic regularization and prototype pruning.">
+  <meta name="keywords" content="Deepfake Attribution, Open-World Learning, Computer Vision, AI, Deep Learning">
   <meta name="author" content="Haiyang Zheng">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
   
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
   <meta property="og:title" content="Open-World Deepfake Attribution via Confidence-Aware Asymmetric Learning">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Open-World Deepfake Attribution via Confidence-Aware Asymmetric Learning - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="Haiyang Zheng">
-  <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
-
-  <!-- Twitter -->
+  <meta property="og:description" content="Identifying known and novel deepfakes in the wild using Confidence-Aware Asymmetric Learning.">
+  <meta property="og:image" content="static/images/teaser.png"> 
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
   <meta name="twitter:title" content="Open-World Deepfake Attribution via Confidence-Aware Asymmetric Learning">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="Open-World Deepfake Attribution via Confidence-Aware Asymmetric Learning - Research Preview">
+  <meta name="twitter:description" content="Identifying known and novel deepfakes in the wild using Confidence-Aware Asymmetric Learning.">
+  <meta name="twitter:image" content="static/images/teaser.png">
 
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="Open-World Deepfake Attribution via Confidence-Aware Asymmetric Learning">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
+  <title>OWDFA-CAL</title>
   
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-
-
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>OWDFA - Haiyang Zheng | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
   
-  <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
-  <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
-  
-  <!-- Fonts - Optimized loading -->
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Defer non-critical JavaScript -->
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "Open-World Deepfake Attribution via Confidence-Aware Asymmetric Learning",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "Haiyang Zheng",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-    ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
-  }
-  </script>
 </head>
+
 <body>
 
-
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top">
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
+<div class="more-works-container">
     <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
       <i class="fas fa-flask"></i>
       More Works
@@ -192,287 +52,430 @@
           <i class="fas fa-times"></i>
         </button>
       </div>
-<div class="works-list">
-  <!-- Paper 1 -->
-  <a href="https://github.com/HaiyangZheng/TextGCD" class="work-item" target="_blank" rel="noopener">
-    <div class="work-info">
-      <h5>Textual Knowledge Matters: Cross-Modality Co-Teaching for Generalized Visual Class Discovery</h5>
-      <!-- <p>Cross-modality co-teaching with textual knowledge to improve generalized visual class discovery.</p> -->
-      <span class="work-venue">ECCV 2024</span>
-    </div>
-    <i class="fas fa-external-link-alt"></i>
-  </a>
+      <div class="works-list">
+        
+        <a href="https://github.com/HaiyangZheng/TextGCD" class="work-item" target="_blank" rel="noopener">
+          <div class="work-info">
+            <h5>Textual Knowledge Matters: Cross-Modality Co-Teaching for Generalized Visual Class Discovery</h5>
+            <span class="work-venue">ECCV 2024</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
 
-  <!-- Paper 2 -->
-  <a href="https://github.com/HaiyangZheng/PHE" class="work-item" target="_blank" rel="noopener">
-    <div class="work-info">
-      <h5>Prototypical Hash Encoding for On-the-Fly Fine-Grained Category Discovery</h5>
-      <!-- <p>Prototypical hash encoding for efficient on-the-fly fine-grained category discovery.</p> -->
-      <span class="work-venue">NeurIPS 2024</span>
-    </div>
-    <i class="fas fa-external-link-alt"></i>
-  </a>
+        <a href="https://github.com/HaiyangZheng/PHE" class="work-item" target="_blank" rel="noopener">
+          <div class="work-info">
+            <h5>Prototypical Hash Encoding for On-the-Fly Fine-Grained Category Discovery</h5>
+            <span class="work-venue">NeurIPS 2024</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
 
-  <!-- Paper 3 -->
-  <a href="https://github.com/HaiyangZheng/MGCE" class="work-item" target="_blank" rel="noopener">
-    <div class="work-info">
-      <h5>MGCE: Extension of CVPR 2023 DCCL</h5>
-      <!-- <p>An extension of the CVPR 2023 DCCL.</p> -->
-      <span class="work-venue">Extension of CVPR 2023 DCCL</span>
-    </div>
-    <i class="fas fa-external-link-alt"></i>
-  </a>
-</div>
-
+        <a href="https://github.com/HaiyangZheng/MGCE" class="work-item" target="_blank" rel="noopener">
+          <div class="work-info">
+            <h5>MGCE: Extension of CVPR 2023 DCCL</h5>
+            <span class="work-venue">Extension of CVPR 2023 DCCL</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        
+      </div>
     </div>
   </div>
 
+
   <main id="main-content">
+
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
+            
             <h1 class="title is-2 publication-title">Open-World Deepfake Attribution via Confidence-Aware Asymmetric Learning</h1>
+            
             <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="https://haiyangzheng.github.io/" target="_blank">Haiyang Zheng</a><sup>1</sup>,</span>
-                <!-- Haiyang Zheng<sup>1</sup>, -->
-              <span class="author-block">
-                Nan Pu<sup>1</sup><sup>*</sup>,
-              </span>
-              <span class="author-block">
-                Wenjing Li<sup>2</sup><sup>*</sup>
-              </span>
-              <span class="author-block">
-                Teng Long<sup>1</sup>
-              </span>
-              <span class="author-block">
-                Nicu Sebe<sup>1</sup>
-              </span>
-              <span class="author-block">
-                and  Zhun Zhong<sup>2</sup>
-              </span>
-                  </div>
+              <span class="author-block"><a href="https://haiyangzheng.github.io/" target="_blank">Haiyang Zheng</a><sup>1</sup>,</span>
+              <span class="author-block">Nan Pu<sup>1*</sup>,</span>
+              <span class="author-block">Wenjing Li<sup>2*</sup>,</span>
+              <span class="author-block">Teng Long<sup>1</sup>,</span>
+              <span class="author-block">Nicu Sebe<sup>1</sup>,</span>
+              <span class="author-block">Zhun Zhong<sup>2</sup></span>
+            </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block"><sup>1</sup>University of Trento  <sup>2</sup>Hefei University of Technology<br>AAAI 2026</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding author</small></span>
-                  </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>University of Trento, <sup>2</sup>Hefei University of Technology<br><b>AAAI 2026</b></span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding author</small></span>
+            </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/2512.12667.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/HaiyangZheng/OWDFA-CAL" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2512.12667.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/HaiyangZheng/OWDFA-CAL" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
                     <span>Code</span>
                   </a>
                 </span>
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/hyzheng/OWDFA40-Benchmark" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="HF"></span>
+                    <span>Dataset</span>
+                  </a>
+                </span>
+              </div>
+            </div>
 
-                  <span class="link-block">
-                    <a href="https://huggingface.co/datasets/hyzheng/OWDFA40-Benchmark" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                          <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face">
-                      </span>
-                      <span>Dataset</span>
-                    </a>
-                  </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths has-text-centered">
+            <img src="static/images/teaser.png" class="interpolation-image" alt="Detective Conan Analogy" style="max-height: 400px; width: auto;"/>
+            <h2 class="subtitle has-text-centered mt-4">
+              <span class="dnerf">OWDFA-CAL</span> utilizes a <b>Confidence-Aware Asymmetric Learning</b> framework to act like a detective, identifying known criminals (Known Deepfakes) and uncovering mysterious new suspects (Novel Deepfakes) in the open world.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      
+      <div class="columns is-centered has-text-centered mb-6">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Task & Motivation</h2>
+        </div>
+      </div>
+
+      <div class="columns is-vcentered">
+        <div class="column is-6">
+          <div class="content">
+            <h3 class="title is-4">
+              <span class="icon is-medium"><i class="fas fa-search"></i></span> 
+              What is OWDFA?
+            </h3>
+            
+            <div class="box has-background-light" style="box-shadow: none; border: 1px solid #eee;">
+              <p class="has-text-weight-bold is-size-5 mb-0 has-text-centered">
+                Open-World Deepfake Attribution (OWDFA)
+              </p>
+            </div>
+
+            <p class="has-text-justified">
+              It acts like a detective. Unlike traditional Deepfake Detection which only performs binary classification (Real vs. Fake), 
+              <b>OWDFA is distinct in the following aspects</b>:
+            </p>
+            
+            <ul class="mt-2">
+              <li>
+                <b>Source Tracing:</b> Distinguish <i>specifically</i> which model created the forgery (e.g., FaceDancer, Diffusion, GANs).
+              </li>
+              <li>
+                <b>The "Open World" Challenge:</b>
+                Unlabeled Data contains a complex mixture of <span class="tag is-info is-light">Known</span> and <span class="tag is-light">Novel</span> types.
+              </li>
+              <li>
+                <b>Goal:</b> Classify knowns while discovering and clustering novels.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="column is-6 has-text-centered">
+          <figure class="image is-inline-block" style="max-width: 90%; margin: 0 auto;"> 
+            <img src="static/images/task_overview.png" alt="OWDFA Task Overview" style="border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <figcaption class="has-text-centered is-size-7 mt-3 has-text-grey">
+              Figure 1. The illustration of Open-World Deepfake Attribution.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <hr class="divider" style="margin: 3rem 0;">
+
+      <div class="columns is-vcentered">
+        <div class="column is-6">
+          <div class="columns is-mobile">
+             <div class="column is-12">
+              <figure class="image mb-5">
+                <img src="static/images/motivation_skew.png" alt="Confidence Skew" style="border: 1px solid #eee; border-radius: 8px; padding: 5px;">
+                <figcaption class="has-text-centered is-size-7 mt-1">Observation 1: Confidence Skew</figcaption>
+              </figure>
+              <figure class="image">
+                <img src="static/images/motivation_noise.png" alt="Noise Proportion" style="border: 1px solid #eee; border-radius: 8px; padding: 5px;">
+                <figcaption class="has-text-centered is-size-7 mt-1">Observation 2: Noise Proportion</figcaption>
+              </figure>
+             </div>
+          </div>
+        </div>
+
+        <div class="column is-6">
+          <div class="content">
+            <h3 class="title is-4">
+              <span class="icon is-medium"><i class="fas fa-exclamation-triangle"></i></span> 
+              Limitations of Existing Methods
+            </h3>
+            <p class="has-text-justified">
+              Despite recent progress, <b>current approaches suffer from two critical limitations</b>:
+            </p>
+            
+            <div class="box has-background-light" style="box-shadow: none; border: 1px solid #eee;">
+              <p class="mb-2"><b>1. Confidence Skew (The Bias)</b></p>
+              <p class="is-size-6 has-text-justified mb-4">
+                Existing methods exhibit a severe <b>confidence gap</b>: high confidence for known forgeries but low for novel ones. This creates a "rich get richer" loop where novel classes are ignored.
+              </p>
+
+              <p class="mb-2"><b>2. Unrealistic Assumption on <i>K</i></b></p>
+              <p class="is-size-6 has-text-justified mb-0">
+                Most methods assume the number of novel forgery types (<i>K</i>) is known <i>a priori</i>. Our method (CAL) removes this assumption by estimating <i>K</i> dynamically.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!--
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
-</section>
--->
-
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            The proliferation of synthetic facial imagery has intensified the need for robust Open-World DeepFake Attribution (OWDFA), 
-            which aims to attribute both known and unknown forgeries using labeled data for known types and unlabeled data containing a mixture of known and novel types. 
-            
-            However, existing OW-DFA methods face two critical limitations: 
-            1) A confidence skew that leads to unreliable pseudo-labels for novel forgeries, resulting in biased training. 
-            2) An unrealistic assumption that the number of unknown forgery types is known a priori. 
-            
-            To address these challenges, we propose a Confidence-Aware Asymmetric Learning (CAL) framework, which adaptively balances model confidence across known and novel forgery types. 
-            CAL mainly consists of two components: Confidence-Aware Consistency Regularization (CCR) and Asymmetric Confidence Reinforcement (ACR). 
-            
-            CCR mitigates pseudo-label bias by dynamically scaling sample losses based on normalized confidence, gradually shifting the training focus from high- to low-confidence samples. 
-            ACR complements this by separately calibrating confidence for known and novel classes through selective learning on high-confidence samples, guided by their confidence gap. 
-            
-            Together, CCR and ACR form a mutually reinforcing loop that significantly improves the model’s OW-DFA performance. 
-            Moreover, we introduce a Dynamic Prototype Pruning (DPP) strategy that automatically estimates the number of novel forgery types in a coarse-to-fine manner, 
-            removing the need for unrealistic prior assumptions and enhancing the scalability of our methods to real-world OW-DFA scenarios. 
-            
-            Extensive experiments on the standard OW-DFA benchmark and a newly extended benchmark incorporating advanced manipulations demonstrate that CAL consistently outperforms previous methods, 
-            achieving new state-of-the-art performance on both known and novel forgery attribution.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
-<!--
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">
-            First image description.
-          </h2>
-        </div>
-        <div class="item">
-          <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">
-            Second image description.
-          </h2>
-        </div>
-        <div class="item">
-          <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">
-            Third image description.
-          </h2>
-        </div>
-        <div class="item">
-          <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">
-            Fourth image description.
-          </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
--->
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<!--
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Video Presentation</h2>
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <div class="publication-video">
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0"
-                    frameborder="0"
-                    allow="autoplay; encrypted-media"
-                    allowfullscreen></iframe>
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              The proliferation of synthetic facial imagery has intensified the need for robust <b>Open-World DeepFake Attribution (OWDFA)</b>, 
+              which aims to attribute both known and unknown forgeries using labeled data for known types and unlabeled data containing a mixture of known and novel types. 
+              However, existing methods face two critical limitations: 
+              1) A <b>confidence skew</b> leading to unreliable pseudo-labels for novel forgeries; 
+              2) An unrealistic assumption that the number of unknown forgery types is known <i>a priori</i>.
+            </p>
+            <p>
+              To address these challenges, we propose a <b>Confidence-Aware Asymmetric Learning (CAL)</b> framework. 
+              CAL consists of two key components: 
+              <b>Confidence-Aware Consistency Regularization (CCR)</b>, which mitigates pseudo-label bias by dynamically scaling sample losses, and 
+              <b>Asymmetric Confidence Reinforcement (ACR)</b>, which separately calibrates confidence for known and novel classes.
+              Together, they form a mutually reinforcing loop that significantly improves performance.
+            </p>
+            <p>
+              Moreover, we introduce a <b>Dynamic Prototype Pruning (DPP)</b> strategy to automatically estimate the number of novel forgery types in a coarse-to-fine manner, removing unrealistic prior assumptions. 
+              Extensive experiments on the standard OW-DFA benchmark and a newly extended <b>OWDFA-40 benchmark</b> demonstrate that CAL consistently achieves new state-of-the-art performance.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
--->
-
-<!-- End youtube video -->
+  </section>
 
 
-<!-- Video carousel -->
-<!--
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
+  <section class="section">
+    <div class="container is-max-desktop">
+      
+      <h2 class="title is-3 has-text-centered mb-5">Method: Confidence-Aware Asymmetric Learning</h2>
+      
+      <figure class="image mb-5" style="margin-left: auto; margin-right: auto;">
+        <img src="static/images/framework.png" alt="CAL Framework Pipeline" style="width: 100%; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.05);">
+      </figure>
+
+      <div class="box has-background-light">
+        <div class="content">
+          <h4 class="title is-5 has-text-centered mb-4">Core Components of CAL</h4>
+          
+          <div class="columns is-multiline">
+            
+            <div class="column is-12">
+              <div class="media">
+                <div class="media-left">
+                  <span class="icon is-large has-text-info"><i class="fas fa-balance-scale fa-2x"></i></span>
+                </div>
+                <div class="media-content">
+                  <p class="title is-5 mb-1">Confidence-Aware Consistency Regularization (CCR)</p>
+                  <p class="is-size-6 has-text-justified">
+                    Uses a threshold-free dynamic weighting strategy. It adaptively shifts training focus from high-confidence known samples to low-confidence novel ones, effectively mitigating the impact of noisy pseudo-labels to ensure stable learning.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-12">
+              <div class="media">
+                <div class="media-left">
+                  <span class="icon is-large has-text-success"><i class="fas fa-sliders-h fa-2x"></i></span>
+                </div>
+                <div class="media-content">
+                  <p class="title is-5 mb-1">Asymmetric Confidence Reinforcement (ACR)</p>
+                  <p class="is-size-6 has-text-justified">
+                    Leverages dynamically adjusted asymmetric thresholds to independently select reliable pseudo-labels for known and novel classes, effectively bridging the confidence gap.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-12">
+              <div class="media">
+                <div class="media-left">
+                  <span class="icon is-large has-text-warning"><i class="fas fa-cut fa-2x"></i></span>
+                </div>
+                <div class="media-content">
+                  <p class="title is-5 mb-1">Dynamic Prototype Pruning (DPP)</p>
+                  <p class="is-size-6 has-text-justified">
+                    Estimates the number of novel forgery types without prior knowledge in a <b>coarse-to-fine</b> manner:
+                  </p>
+                  <div class="tags are-medium mt-2">
+                    <span class="tag is-white">High-confidence Identification</span>
+                    <span class="icon is-small"><i class="fas fa-arrow-right"></i></span>
+                    <span class="tag is-white">Low-confidence Filtering</span>
+                    <span class="icon is-small"><i class="fas fa-arrow-right"></i></span>
+                    <span class="tag is-white">Similarity-driven Merge</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section" id="experiments">
+    <div class="container is-max-desktop">
+      
+      <h2 class="title is-3 has-text-centered mb-6">Experiments</h2>
+
+      <div class="columns is-vcentered mb-6">
+        <div class="column is-5">
+          <div class="content has-text-justified">
+            <h3 class="title is-4">1. The OWDFA-40 Benchmark</h3>
+            <p>
+              To simulate realistic open-world scenarios, we constructed the <b>OWDFA-40 Benchmark</b>, extending the original setup to include <b>40 advanced deepfake generation methods</b>.
+            </p>
+            <ul>
+              <li>
+                <b>Diversity:</b> Covers 5 categories including Face Swapping, Reenactment, Editing, Entire Face Synthesis, and <span style="color: #d9534f;">Diffusion-based Generation</span>.
+              </li>
+              <li>
+                <b>Protocols:</b> We designed three protocols with varying degrees of "openness" to rigorously evaluate robustness against unseen paradigms.
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
+
+        <div class="column is-7">
+          <figure class="image">
+            <img src="static/images/datasets.png" alt="Overview of Deepfake Methods in OWDFA-40" style="border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            <figcaption class="has-text-centered is-size-7 mt-2">
+              Table 1. Overview of Deepfake Methods and Protocol Splits.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <div class="content has-text-justified">
+        <h3 class="title is-4">2. Comparison with State-of-the-Art</h3>
+        <p>
+          We compare CAL with SOTA methods (CPL, CDAL) and strong baselines from GCD and OWSSL settings.
+        </p>
+        <div class="box" style="background-color: #f5f5f5;">
+          <p class="is-size-6">
+            <span class="icon has-text-success"><i class="fas fa-check-circle"></i></span> 
+            <b>Key Finding:</b> CAL achieves a new state-of-the-art performance across all three protocols. Notably, it surpasses CPL by an average of <b>7.3% in Novel ACC</b>, demonstrating superior ability to discover unknown forgery types.
+            <br>
+            <span class="icon has-text-success"><i class="fas fa-check-circle"></i></span> 
+            <b>Unknown K:</b> Even without knowing the number of novel types (<i>w/o K<sub>U</sub></i>), our method outperforms baselines that rely on this prior knowledge.
+          </p>
+        </div>
+
+        <figure class="image mt-4 mb-6">
+          <img src="static/images/results_sota.png" alt="SOTA Comparison Results" style="border-radius: 5px;">
+          <figcaption class="has-text-centered is-size-7 mt-2">
+            Table 2. Quantitative results on the OW-DFA-40 benchmark. Best results are bolded.
+          </figcaption>
+        </figure>
+      </div>
+
+      <hr class="divider">
+
+      <div class="columns is-variable is-8">
+        
+        <div class="column is-6">
+          <div class="content has-text-justified">
+            <h3 class="title is-5 has-text-centered-mobile">3. Ablation Study</h3>
+            <p class="is-size-6 mb-3">
+              We conduct a step-by-step ablation to validate the effectiveness of our key components:
+            </p>
+            <ul class="is-size-6 mt-0" style="margin-left: 1.5em;">
+              <li><b>Base Loss:</b> Foundational performance.</li>
+              <li><b>CCR:</b> Boosts Novel ACC (+32.8%) by mitigating noise.</li>
+              <li><b>ACR:</b> Bridges the confidence gap.</li>
+              <li><b>FFE:</b> Improves generalized representation.</li>
+            </ul>
+            
+            <figure class="image mt-5">
+              <img src="static/images/results_ablation.png" alt="Ablation Study Table" style="border: 1px solid #eee; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+              <figcaption class="has-text-centered is-size-7 mt-2 has-text-grey">
+                Table 3. Effectiveness of Key Components.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="column is-6">
+          <div class="content has-text-justified">
+            <h3 class="title is-5 has-text-centered-mobile">4. Estimating Unknown <i>K</i></h3>
+            <p class="is-size-6 mb-4">
+              Unlike GCD methods that rely on clustering accuracy of known classes to guess <i>K</i>, our <b>Dynamic Prototype Pruning (DPP)</b> strategy directly estimates the number of novel forgeries with much lower error.
+            </p>
+            
+            <div class="is-hidden-mobile" style="height: 1.2rem;"></div>
+
+            <figure class="image mt-4">
+              <img src="static/images/results_k_estimation.png" alt="Class Number Estimation Results" style="border: 1px solid #eee; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+              <figcaption class="has-text-centered is-size-7 mt-2 has-text-grey">
+                Table 4. Estimation Error Comparison.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Poster Presentation</h2>
+        <div class="publication-poster">
+          <img src="static/images/poster.png" alt="Project Poster" style="width: 100%; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.1);">
         </div>
       </div>
     </div>
   </div>
 </section>
--->
-
-<!-- End video carousel -->
 
 
-
-
-
-
-<!-- Paper poster -->
-<!--
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-      <iframe src="static/pdfs/sample.pdf" width="100%" height="550"></iframe>
-    </div>
-  </div>
-</section>
--->
-
-<!--End paper poster -->
-
-
-
-<!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <div class="bibtex-header">
@@ -489,31 +492,23 @@
   year={2025}
 }</code></pre>
     </div>
-</section>
-<!--End BibTex citation -->
+  </section>
 
 
   <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-          </p>
-
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> adopted from <a href="https://nerfies.github.io" target="_blank">Nerfies</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+  </main>
+</body>
+</html>
