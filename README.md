@@ -1,7 +1,7 @@
 # Open-World Deepfake Attribution via Confidence-Aware Asymmetric Learning
 
 <p align="center">
-    <img src="https://img.shields.io/badge/AAAI-2026-red">
+    <a href="https://ojs.aaai.org/index.php/AAAI/article/view/38341"><img src="https://img.shields.io/badge/AAAI-2026-red">
     &nbsp;
     <a href="https://arxiv.org/pdf/2512.12667"><img src="https://img.shields.io/badge/arXiv-2512.12667-red"></a>
     &nbsp;
